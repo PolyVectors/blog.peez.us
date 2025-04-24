@@ -1,0 +1,31 @@
+body {
+	font-familly: 'Open Sans', monospace;
+	background-color: #242038;
+	color: #F7ECE1;
+}
+
+.code-title {
+	font-family: monospace;
+	background-color: #0B0913;
+
+	margin: 0 auto;
+	padding: 8px;
+	width: 98%;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.outer-code {
+	padding: 12px;
+}
+
+.inner-code {
+	background-color: #161226;
+	filter: drop-shadow(8px 8px 6px #161226);
+
+	margin: 0 auto;
+	padding: 8px;
+	width: 98%;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
