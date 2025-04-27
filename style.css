@@ -1,41 +1,107 @@
 body {
 	font-family: 'Open Sans', monospace;
+	font-size: 16px;
 	background-color: #242038;
 	color: #F7ECE1;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0B0913;
-  position: fixed;
-  top: 0;
-  width: 100%;
+@media (max-width: 240px) {
+   .container {
+   		padding: 20px;
+   		margin: 0 auto;
+   		margin-top: 32px;
+   		width: 85%;
+   	}
+}
+@media (min-width: 241px) and (max-width: 319px) {
+   .container {
+   		padding: 20px;
+   		margin: 0 auto;
+   		margin-top: 32px;
+   		width: 75%;
+   	}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+   .container {
+   		padding: 20px;
+   		margin: 0 auto;
+   		margin-top: 32px;
+   		width: 65%;
+   	}
+}
+@media (min-width: 768px) {
+   .container {
+   		padding: 20px;
+   		margin: 0 auto;
+   		margin-top: 32px;
+   		width: 50%;
+   	}
 }
 
-li {
-  float: left;
-}
+.navbar {
+	list-style-type: none;
+	margin: 0;
+  	padding: 0;
+	overflow: hidden;
+	background-color: #0B0913;
+	position: fixed;
+	top: 0;
+	width: 100%;
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+	li {
+	  float: left;
+	}
+	
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
 }
 
 h1 {
+	background: linear-gradient(to right, #CAC4CE, #F7ECE1);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	padding: 0;
+	padding-top: 12px;
+	margin: 0;
+} 
+
+h1.title {
 	font-size: 48px;
 }
 
-.container {
-	padding: 20px;
-	margin: 0 auto;
-	margin-top: 32px;
-	width: 85%;
+h2 {
+	padding: 0;
+	padding-bottom: 12px;
+	margin:0;
+}
+
+a {
+	color: #CAC4CE;
+	text-decoration: none;
+}
+
+a.article {
+	font-size: 24px;
+}
+
+a:hover {
+	background: linear-gradient(to right, #725AC1, #8D86C9);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+
+code {
+	background-color: #161226;
+	padding: 2px;
+	border-radius: 2px;
 }
 
 .code-title {
