@@ -1,7 +1,41 @@
 body {
-	font-familly: 'Open Sans', monospace;
+	font-family: 'Open Sans', monospace;
 	background-color: #242038;
 	color: #F7ECE1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0B0913;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+.container {
+	padding: 20px;
+	margin: 0 auto;
+	margin-top: 32px;
+	width: 85%;
 }
 
 .code-title {
