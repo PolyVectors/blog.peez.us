@@ -23,7 +23,7 @@
 
 		<h1>What's a <a href="https://docs.urbit.org/language/nock">Nock</a>?</h1>
 
-		<p>As the team behind Urbit puts it, <a href="https://docs.urbit.org/language/nock">Nock</a> is a "low-level functional programming language" or a "Turing-complete function that maps a cell <code>[subject formula]</code> to a noun <code>product</code>, where <code>subject</code> is the data, <code>formula</code> is the code, and <code>product</code> is the result." but let's not worry about that second definition...<p/>
+		<p>As the team behind Urbit puts it, <a href="https://docs.urbit.org/language/nock">Nock</a> is a "low-level functional programming language" or a "Turing-complete function that maps a cell <code class="inline">[subject formula]</code> to a noun <code class="inline">product</code>, where <code class="inline">subject</code> is the data, <code class="inline">formula</code> is the code, and <code class="inline">product</code> is the result." but let's not worry about that second definition...<p/>
 		<p>The part that interested <i>me</i> about <a href="https://docs.urbit.org/language/nock">Nock</a> was how tiny some implementations of the language are.</p>
 
 		<p>Here are some statistics:</p>
@@ -36,21 +36,36 @@
 		<p>This by itself is crazy enough but there are already tiny implementations of other languages such as Brainfuck but what sets <a href="https://docs.urbit.org/language/nock">Nock</a> apart is that it is <b>not a toy</b>. This language being the base of an entire operating system shows how the power of a language is not correlated to its size at all.</p>
 		<p>The idea of a <a href="https://docs.urbit.org/language/nock">Nock</a> to me represents a tiny (yet extremely powerful) low-level systems programming language. So I wanted to bulid my own.</p>
 
-		<h1>Building My Own "<a href="https://docs.urbit.org/language/nock">Nock</a>"</h1>
+		<h1>Designing My Own "<a href="https://docs.urbit.org/language/nock">Nock</a>"</h1>
 
-		<p>Let's set some ground rules:</p>
-		
-		<!--
+		<p>Here are some ground rules for my language:</p>
+
+		<ol>
+			<li>Syntax should be as simple as possible</li>
+			<li>Compiled binary should be as small as possible</li>
+			<li>Code should compile to an ELF binary</li>
+		</ol>
+
+		<p>Firstly, I defined the syntax of this language, the simplest possible code I could think off was an array of hexadecimal bytes corrosponding to the bytes in the final binary, for example:</p>
+
 		<div class="outer-code">
-			<p class="code-title">main.c</p>
-			<pre class="inner-code"><code>#include &lt;stdio.h&gt;
-
-int main() {
-	printf("Hello, world!");
-	return 0;
-}</code></pre>
+			<p class="code-title">hello.asm</p>
+			<pre class="inner-code"><code>48 65 6c 6c 6f 2c 20 77 6f 72 6c 64 0a ; "Hello, world\n"</code></pre>
 		</div>
-		!-->
+
+		<p>This would make my language lean closer to machine code than assembly but the whole point of this is to be low level.</p>
+
+		<p>Secondly, to create the smallest possible binary theres only one obvious choice for my programming language, that being assembly.</p>
+		<p>The assembler I decided to use was <a href="https://flatassembler.net">FASM</a>, which I discovered from a <a href="https://www.youtube.com/watch?v=hzjBdIJ9Ycs">Tsoding VOD</a> and opened my eyes to the world of small executables.</p>
+		<p>This final rule is here just because I was too lazy to add any other build options but Linux.</p>
+
+		<p>As a bonus challenge I built the entire assembler with zero statically or dynamically linked dependencies (including libc).</p>
+
+		<h1>Actually Building the Thing</h1>
+	</div>
+
+	<div class="footer">
+		<p>Made by peezus w/ HTML & CSS, source code available <a href="https://github.com/PolyVectors/blog.peez.us">here</a>.</p>
 	</div>
 </body>
 </html>
